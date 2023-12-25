@@ -519,14 +519,15 @@ void KnxTpUart::sendNotAddressed() {
 }
 
 int KnxTpUart::serialRead() {
-  unsigned long startTime = millis();
+  int startTime = (int) millis();
 #if defined(TPUART_DEBUG)
   TPUART_DEBUG_PORT.print("Available: ");
   TPUART_DEBUG_PORT.println(_serialport->available());
 #endif
 
   while (! (_serialport->available() > 0)) {
-    if (abs(millis() - startTime) > SERIAL_READ_TIMEOUT_MS) {
+    int currentTime = (int) millis();
+    if (abs(currentTime - startTime) > SERIAL_READ_TIMEOUT_MS) { // MODIFICADO
       // Timeout
 #if defined(TPUART_DEBUG)
       TPUART_DEBUG_PORT.println("Timeout while receiving message");
