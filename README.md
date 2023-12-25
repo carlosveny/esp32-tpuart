@@ -42,6 +42,7 @@ To test the library you can use any of the examples provided, or just run the fo
 - If you are using a board with just 1 Serial (Arduino Uno for example), make sure to initialize just one serial in the program.
 - During compilation of the project, the TX and RX wires can't be connected to the BCU.
 
+This code sends a true/false signal every 5 seconds to the device address specified.
 ```ino
 #include <KnxTpUart.h>
 
