@@ -58,7 +58,7 @@ void setup() {
 
 void loop() {
   knx.groupWriteBool(KNX_ADDRESS, toSend);
-  Serial.println(toSend ? "true" : "false");
+  Serial.println(toSend);
   toSend = !toSend;
   delay(5000);
 }
