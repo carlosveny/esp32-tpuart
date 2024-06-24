@@ -1,8 +1,8 @@
 # ESP32 KNX Interface via TP-UART
 This library is forked from [arduino-tpuart](https://github.com/Domos-Snips/arduino-tpuart) and adds support for esp32 instead of only working for Arduino.
 
-## Instalation
-The instalation consists of making a .zip of the KnxTpUart folder and importing it to the Arduino IDE:
+## Installation
+The installation consists of making a .zip of the KnxTpUart folder and importing it to the Arduino IDE:
 ```
 Sketch > Add library > Add zip library
 ```
